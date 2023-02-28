@@ -1,4 +1,8 @@
-import java.io.*;
+package solution;
+
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 
 /**
  * The class contains a method for generating a html document
@@ -12,7 +16,6 @@ public class HtmlGenerator {
      */
     public void saveToHtml(String[][] schedule, String filename) {
         StringBuilder html = new StringBuilder("<html><head><meta charset='UTF-8'></head><body><div style='display: table;'>");
-        html.append("<div style='display: table-row;'>");
         html.append("<div style='display: table-cell; font-weight: bold;'>N</div>");
         html.append("<div style='display: table-cell; font-weight: bold;'>Специалист</div>");
         html.append("<div style='display: table-cell; font-weight: bold;'>Понедельник</div>");
@@ -22,6 +25,7 @@ public class HtmlGenerator {
         html.append("<div style='display: table-cell; font-weight: bold;'>Пятница</div>");
         html.append("<div style='display: table-cell; font-weight: bold;'>Суббота</div>");
         html.append("<div style='display: table-cell; font-weight: bold;'>Воскресенье</div>");
+        html.append("<div style='display: table-row;'></div>");
         html.append("</div>");
 
         for (int i = 0; i < schedule.length; i++) {
