@@ -15,9 +15,9 @@ public class HtmlGenerator {
         html.append("<div style='display: table-cell; font-weight: bold;'>Воскресенье</div>");
         html.append("</div>");
 
-        for (int i=0; i<schedule.length; i++) {
+        for (int i = 0; i < schedule.length; i++) {
             html.append("<div style='display: table-row;'>");
-            html.append(i+1);
+            html.append(i + 1);
             for (String cell : schedule[i]) {
                 html.append("<div style='display: table-cell;'>");
                 html.append(cell);
@@ -36,7 +36,6 @@ public class HtmlGenerator {
             System.out.println("Ошибка при записи в файл: " + e.getMessage());
         }
     }
-
 
 
 }
