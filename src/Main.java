@@ -1,3 +1,6 @@
+/**
+ * The class is the entry point. The base execution script is set
+ */
 public class Main {
     public static void main(String[] args) {
         String[] doc1 = {"doc1name", "10:00-11:00", "", "", "", "", "", "13:20-13:40"};
@@ -6,7 +9,7 @@ public class Main {
         String[] doc4 = {"doc4name", "12:34-14:56", "", "", "", "", "", "13:20-13:40"};
         String[] doc5 = {"doc4name", "11:35-13:45", "", "", "", "", "", "13:10-13:40"};
         String[] doc6 = {"doc4name", "17:35-18:45", "", "", "", "", "", "13:10-13:40"};
-//        String[] doc7 = {"doc4name", "14:55-17:45", null, null, null, null, null, "13:10-13:40"};
+
         String[][] schedule = {doc1, doc2, doc3, doc4, doc5, doc6};
         WorkTimeParser workTimeParser = new WorkTimeParser();
         String[][] strings = workTimeParser.prepareWorkTime(schedule);

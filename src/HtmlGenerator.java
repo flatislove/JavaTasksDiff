@@ -1,6 +1,15 @@
 import java.io.*;
 
+/**
+ * The class contains a method for generating a html document
+ */
 public class HtmlGenerator {
+    /**
+     * Method for generating page html only from div tags
+     *
+     * @param schedule specialist scheduling matrix
+     * @param filename HTML document name
+     */
     public void saveToHtml(String[][] schedule, String filename) {
         StringBuilder html = new StringBuilder("<html><head><meta charset='UTF-8'></head><body><div style='display: table;'>");
         html.append("<div style='display: table-row;'>");
@@ -25,17 +34,13 @@ public class HtmlGenerator {
             }
             html.append("</div>");
         }
-
         html.append("</div></body></html>");
-
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(filename));
             writer.write(html.toString());
             writer.close();
         } catch (IOException e) {
-            System.out.println("Ошибка при записи в файл: " + e.getMessage());
+            System.out.println("Error writing to file: " + e.getMessage());
         }
     }
-
-
 }
