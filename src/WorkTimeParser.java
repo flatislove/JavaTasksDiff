@@ -35,9 +35,6 @@ public class WorkTimeParser {
             }
             if (!isEmpty) {
 
-
-
-
                 String[] one = scheduleOne[i].split("-");
                 String[] two = scheduleTwo[i].split("-");
 
@@ -60,10 +57,6 @@ public class WorkTimeParser {
             }
         }
         return actual;
-    }
-
-    private String mergeRanges(String ranges, String time){
-        return "";
     }
 
     private String[][] convertMapToMatrix(Map<String, String[]> schedules) {

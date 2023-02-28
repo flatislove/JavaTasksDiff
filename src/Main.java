@@ -17,6 +17,6 @@ public class Main {
             System.out.println();
         }
         HtmlGenerator htmlGenerator = new HtmlGenerator();
-        htmlGenerator.saveToHtml(strings, "1schedule.html");
+        htmlGenerator.saveToHtml(strings, "schedule.html");
     }
 }
